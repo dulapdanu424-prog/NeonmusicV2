@@ -2,355 +2,97 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neon Music</title>
+  <title>My Neon Music</title>
   <link rel="stylesheet" href="body.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="hero">
-      <div class="hero-badge">Neon Music</div>
-      <h1>Твоя музыка в одном ярком плеере</h1>
-      <p>Все треки из папки music теперь собраны в красивом и удобном интерфейсе.</p>
-      <div class="hero-actions">
-        <button onclick="playPlaylist()">▶ Воспроизвести всё</button>
-        <button onclick="randomTrack()">🎲 Случайный трек</button>
-        <label class="theme-switch"><input type="checkbox" id="themeToggle" onchange="toggleTheme()"> Светлая тема</label>
-      </div>
-    </header>
+  <h1>🎵 My Neon Music 🎵</h1>
+  <p class="email">dulapdanu811@gmail.com</p>
 
-    <section class="controls">
-      <div class="search-card">
-        <input type="text" id="searchInput" placeholder="Поиск по трекам..." oninput="renderTracks()">
-      </div>
-      <div class="filters-card">
-        <select id="genreFilter" onchange="renderTracks()">
-          <option value="">Все жанры</option>
-          <option value="rap">Rap</option>
-          <option value="pop">Pop</option>
-          <option value="other">Другое</option>
-        </select>
-        <button onclick="sortTracks('asc')">A → Я</button>
-        <button onclick="sortTracks('desc')">Я → A</button>
-      </div>
-    </section>
+  <div class="grid">
+    <!-- Колонка 1 -->
+    <div class="column">
+      <div class="track"><h2>Icegergert_78_flow</h2><audio controls><source src="Icegergert_78_flow.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT_Syn_ot_che_rnyh_korolev</h2><audio controls><source src="ICEGERGERT_Syn_ot_che_rnyh_korolev.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Беспредел.ru</h2><audio controls><source src="Беспредел.ru.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Я её фанат</h2><audio controls><source src="яеефанат.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>bula-by-svnv-tleet</h2><audio controls><source src="bula-by-svnv-tleet.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Doll Carranza Va Pa Dentro</h2><audio controls><source src="Doll Carranza Va Pa Dentro.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Eminem - Lose Yourself</h2><audio controls><source src="Eminem - Lose Yourself.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Eminem ft Juice Wrld - Godzilla</h2><audio controls><source src="Eminem_ft_Juice_Wrld_-_Godzilla.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>F0lk_Shosse</h2><audio controls><source src="F0lk_Shosse.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Last Night ICEGERGERT</h2><audio controls><source src="ton_titre.mp3.mp3" type="audio/mpeg"></audio></div>
+    </div>
 
-    <section class="stats">
-      <div class="stat-card">
-        <strong id="trackCount">0</strong>
-        <span>треков</span>
-      </div>
-      <div class="stat-card">
-        <strong id="playlistCount">0</strong>
-        <span>в плейлисте</span>
-      </div>
-      <div class="stat-card">
-        <strong id="historyCount">0</strong>
-        <span>в истории</span>
-      </div>
-    </section>
+    <!-- Колонка 2 -->
+    <div class="column">
+      <div class="track"><h2>Скриптонит — Положение</h2><audio controls><source src="Положение.mp3.mp4" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT — Plug</h2><audio controls><source src="plug.mp3.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT — Международный Андеграунд</h2><audio controls><source src="last.mp3.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>gamora-ad</h2><audio controls><source src="gamora-ad.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>icegergert-gektor</h2><audio controls><source src="icegergert-gektor.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Manele</h2><audio controls><source src="Manele.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>MORGENSHTERN - Последняя любовь</h2><audio controls><source src="MORGENSHTERN-Последняя_любовь.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Nurminskij - Dzhip</h2><audio controls><source src="Nurminskij_Dzhip.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Ламбада</h2><audio controls><source src="Ламбада.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT - АРИТМИЯ</h2><audio controls><source src="ICEGERGERT - АРИТМИЯ.mp3" type="audio/mpeg"></audio></div>
+    </div>
 
-    <section class="content-grid">
-      <div class="panel">
-        <h3>Плейлист</h3>
-        <ul id="playlistList"></ul>
-      </div>
-      <div class="panel">
-        <h3>История прослушиваний</h3>
-        <ul id="historyList"></ul>
-      </div>
-    </section>
+    <!-- Колонка 3 -->
+    <div class="column">
+      <div class="track"><h2>Hai tu Maria</h2><audio controls><source src="Hai_tu_Maria.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Последний танец</h2><audio controls><source src="Tini.mp4" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>S9 La Street</h2><audio controls><source src="S9 La Street.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Santiz - Моей Семье</h2><audio controls><source src="Santiz_-_Моей_Семье.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Skriptonit - Rysba</h2><audio controls><source src="Skriptonit_Rysba.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Stefaan Junior - Cheia Franceza</h2><audio controls><source src="Stefaan Junior - Cheia Franceza.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>TSM</h2><audio controls><source src="TSM.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>unnv_pisma</h2><audio controls><source src="unnv_pisma.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Vektor A - Naposledok</h2><audio controls><source src="Vektor_A_-_Naposledok.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Vektor A - Snova</h2><audio controls><source src="Vektor_A_Snova.mp3" type="audio/mpeg"></audio></div>
+    </div>
 
-    <section class="grid" id="tracksGrid"></section>
+    <!-- Колонка 4 -->
+    <div class="column">
+      <div class="track"><h2>Vektor A - Ya v poryadke</h2><audio controls><source src="Vektor_A_Ya_v_poryadke.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Vektor A - Lirika</h2><audio controls><source src="vektor-a-lirika.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>VEN1 & Ramos - Vanilla</h2><audio controls><source src="VEN1 & Ramos. - Vanilla.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Xcho - Мир На Двоих</h2><audio controls><source src="Xcho - Мир На Двоих.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Xcho - Где же вы</h2><audio controls><source src="xcho-gde-zhe-vy.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Xcho - Про любовь</h2><audio controls><source src="xcho-pro-lyubov.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Вектор А - Не вернусь</h2><audio controls><source src="Вектор А - Не вернусь.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Гио Пика - Где ты</h2><audio controls><source src="Гио Пика - Где ты.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Скриптонит & Райда - Baby Mama</h2><audio controls><source src="Скриптонит & Райда - Baby Mama.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Фогель & Вектор А - Пока</h2><audio controls><source src="Фогель Вектор А - Пока.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Guf - Письмо Домой</h2><audio controls><source src="Guf - Письмо Домой.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>GUF - Сегодня-завтра</h2><audio controls><source src="GUF - Сегодня-завтра - startpesni.org.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT - Багира</h2><audio controls><source src="ICEGERGERT - Багира.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT - По сути</h2><audio controls><source src="ICEGERGERT - По сути.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>ICEGERGERT, Bang OG - Last night</h2><audio controls><source src="ICEGERGERT, Bang OG - Last night.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Miyagi & Эндшпиль - Last Of Us</h2><audio controls><source src="Miyagi & Эндшпиль - Last Of Us.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Miyagi & Эндшпиль feat. Truwer - No Reason</h2><audio controls><source src="Miyagi & Эндшпиль feat. Truwer - No Reason.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Santiz - Забытый бала</h2><audio controls><source src="Santiz_-_Zabytyj_bala_(SkySound.cc).mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Taras - С Ней Живой</h2><audio controls><source src="Taras - С Ней Живой.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Яд Добра - Время молодёжи</h2><audio controls><source src="Яд Добра - Время молодёжи.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Каспийский Груз - Город Невест</h2><audio controls><source src="Каспийский Груз - Город Невест.mp3" type="audio/mpeg"></audio></div>
+      <div class="track"><h2>Питбуль & Pharrell a - Blanco</h2><audio controls><source src="Питбуль & Pharrell a - Blanco.mp3" type="audio/mpeg"></audio></div>
+    </div>
   </div>
 
-  <div id="notification" class="notification"></div>
-
-  <section class="support-section">
-    <h3>Жалобы и отзывы</h3>
-    <p>Пишите на <a href="mailto:dulapdanu424@gmail.com">dulapdanu424@gmail.com</a></p>
-  </section>
-
   <script>
-    const STORAGE_KEY = 'neonMusicState_v2';
-    const initialFiles = [
-      '18+.mp3',
-      'bula-by-svnv-tleet.mp3',
-      'Doll Carranza Va Pa Dentro.mp3',
-      'Eminem - Lose Yourself.mp3',
-      'Eminem_ft_Juice_Wrld_-_Godzilla.mp3',
-      'F0lk_Shosse.mp3',
-      'gamora-ad.mp3',
-      'Hai_tu_Maria.mp3',
-      'ICEGERGERT - Аритмия.mp3',
-      'icegergert-gektor.mp3',
-      'Icegergert_78_flow.mp3',
-      'ICEGERGERT_Syn_ot_che_rnyh_korolev.mp3',
-      'plug.mp3',
-      'S9 La Street.mp3',
-      'Santiz_-_Моей_Семье.mp3',
-      'Skriptonit_Rysba.mp3',
-      'Stefaan Junior - Cheia Franceza.mp3',
-      'Tini.mp4',
-      'ton_titre.mp3',
-      'TSM.mp3',
-      'unnv_pisma.mp3',
-      'vektor-a-lirika.mp3',
-      'vektor-a-odin-polnaya-versiya.mp3',
-      'Vektor_A_-_Naposledok.mp3',
-      'Vektor_A_Snova.mp3',
-      'Vektor_A_Ya_v_poryadke.mp3',
-      'VEN1 & Ramos. - Vanilla.mp3',
-      'Xcho - Мир На Двоих.mp3',
-      'xcho-gde-zhe-vy.mp3',
-      'xcho-pro-lyubov.mp3',
-      'Беспредел.ru.mp3',
-      'Вектор А - Не вернусь.mp3',
-      'Гио Пика - Где ты.mp3',
-      'Ламбада.mp3',
-      'Положение.mp4',
-      'Скриптонит & Райда - Baby Mama.mp3',
-      'Фогель Вектор А - Пока.mp3',
-      'Яд Добра - Время молодёжи.mp3',
-      'яеефанат.mp3'
-    ];
+    document.addEventListener('DOMContentLoaded', () => {
+      const audios = document.querySelectorAll('audio');
 
-    let trackData = [];
-    let currentSort = 'asc';
-    const playlist = [];
-    const history = [];
-
-    function formatTitle(file) {
-      return file
-        .replace(/\.(mp3|mpeg|mp4)$/i, '')
-        .replace(/[_-]+/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
-    }
-
-    function detectGenre(file) {
-      const lower = file.toLowerCase();
-      if (/(eminem|skriptonit|icegergert|vektor|xcho|s9|ramos|rap)/i.test(lower)) return 'rap';
-      if (/(maria|vanilla|love|baby|last|pop|tini)/i.test(lower)) return 'pop';
-      return 'other';
-    }
-
-    function buildSourcePath(file) {
-      return encodeURI(file);
-    }
-
-    function getInitialTracks() {
-      return initialFiles.map((file, index) => ({
-        id: `initial-${index}`,
-        title: formatTitle(file),
-        file,
-        sourcePath: buildSourcePath(file),
-        genre: detectGenre(file),
-        likes: 0,
-        comments: []
-      }));
-    }
-
-    function saveState(data) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    }
-
-    function loadState() {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          if (Array.isArray(parsed) && parsed.length) {
-            return parsed;
-          }
-        }
-      } catch (error) {
-        console.warn('Не удалось прочитать локальное хранилище', error);
-      }
-      const initial = getInitialTracks();
-      saveState(initial);
-      return initial;
-    }
-
-    function escapeHtml(text) {
-      return String(text)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    }
-
-    async function loadTracks() {
-      trackData = loadState();
-      renderTracks();
-    }
-
-    function createTrackCard(track) {
-      const card = document.createElement('article');
-      card.className = 'track-card';
-      card.dataset.genre = track.genre;
-      const source = track.sourcePath || buildSourcePath(track.file);
-      const commentsMarkup = (track.comments || []).map(comment => `<p class="comment-item">${escapeHtml(comment.text)}</p>`).join('');
-      card.innerHTML = `
-        <div class="track-top">
-          <h3>${escapeHtml(track.title)}</h3>
-          <span class="genre-pill">${track.genre === 'rap' ? 'Rap' : track.genre === 'pop' ? 'Pop' : 'Другое'}</span>
-        </div>
-        <audio controls preload="none">
-          <source src="${source}" type="audio/mpeg">
-        </audio>
-        <div class="track-actions">
-          <button class="like-btn" onclick="likeTrack(this, '${track.id}')" title="Поставить лайк">
-            <span class="like-icon">❤</span>
-            <span class="like-count">${track.likes || 0}</span>
-          </button>
-          <a class="download-btn" href="${source}" download title="Скачать трек">⬇️</a>
-        </div>
-        <div class="comments-box">
-          ${commentsMarkup}
-          <input type="text" class="comment-input" placeholder="Комментарий..." onkeydown="if(event.key==='Enter'){ addComment(this, '${track.id}') }">
-        </div>
-      `;
-      return card;
-    }
-
-    function renderTracks() {
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      const genre = document.getElementById('genreFilter').value;
-      const grid = document.getElementById('tracksGrid');
-      const filtered = trackData.filter(track => {
-        const matchesQuery = track.title.toLowerCase().includes(query) || (track.sourcePath || '').toLowerCase().includes(query);
-        const matchesGenre = !genre || track.genre === genre;
-        return matchesQuery && matchesGenre;
-      });
-
-      const sorted = [...filtered].sort((a, b) => {
-        const result = a.title.localeCompare(b.title, 'ru');
-        return currentSort === 'asc' ? result : -result;
-      });
-
-      grid.innerHTML = '';
-      sorted.forEach(track => grid.appendChild(createTrackCard(track)));
-      document.getElementById('trackCount').textContent = sorted.length;
-      bindAudioEvents();
-    }
-
-    function sortTracks(order) {
-      currentSort = order;
-      renderTracks();
-      showNotification(order === 'asc' ? 'Сортировка: от А до Я' : 'Сортировка: от Я до А');
-    }
-
-    function likeTrack(btn, trackId) {
-      const current = trackData.find(track => track.id === trackId);
-      if (!current) return;
-      const liked = btn.classList.toggle('liked');
-      const count = btn.querySelector('.like-count');
-      current.likes = Math.max(0, Number(current.likes || 0) + (liked ? 1 : -1));
-      count.textContent = current.likes;
-      saveState(trackData);
-      showNotification('Лайк обновлён');
-    }
-
-    function addComment(input, trackId) {
-      const text = input.value.trim();
-      if (!text) return;
-      const current = trackData.find(track => track.id === trackId);
-      if (!current) return;
-      current.comments = current.comments || [];
-      current.comments.push({ id: Date.now().toString(), text });
-      input.value = '';
-      saveState(trackData);
-      renderTracks();
-      showNotification('Комментарий добавлен');
-    }
-
-    function randomTrack() {
-      const cards = Array.from(document.querySelectorAll('.track-card'));
-      const visible = cards.filter(card => card.style.display !== 'none');
-      if (!visible.length) return;
-      const index = Math.floor(Math.random() * visible.length);
-      visible[index].querySelector('audio').play();
-      showNotification(`Случайный трек: ${visible[index].querySelector('h3').textContent}`);
-    }
-
-    function toggleTheme() {
-      document.body.classList.toggle('light-theme');
-    }
-
-    function showNotification(message) {
-      const notif = document.getElementById('notification');
-      notif.textContent = message;
-      notif.classList.add('show');
-      clearTimeout(showNotification.timeout);
-      showNotification.timeout = setTimeout(() => notif.classList.remove('show'), 2200);
-    }
-
-    function bindAudioEvents() {
-      const audios = document.querySelectorAll('.track-card audio');
-      audios.forEach(audio => {
-        audio.onplay = () => {
-          audios.forEach(other => {
-            if (other !== audio) {
-              other.pause();
-              other.currentTime = 0;
+      audios.forEach((audio) => {
+        audio.addEventListener('play', () => {
+          audios.forEach((otherAudio) => {
+            if (otherAudio !== audio) {
+              otherAudio.pause();
             }
           });
-          const title = audio.closest('.track-card').querySelector('h3').textContent;
-          if (!history.includes(title)) {
-            history.unshift(title);
-            updateHistory();
-          }
-          if (!playlist.includes(title)) {
-            playlist.push(title);
-            updatePlaylist();
-          }
-        };
+        });
       });
-    }
-
-    function updatePlaylist() {
-      const list = document.getElementById('playlistList');
-      list.innerHTML = '';
-      playlist.slice(0, 8).forEach(track => {
-        const li = document.createElement('li');
-        li.textContent = track;
-        list.appendChild(li);
-      });
-      document.getElementById('playlistCount').textContent = playlist.length;
-    }
-
-    function updateHistory() {
-      const list = document.getElementById('historyList');
-      list.innerHTML = '';
-      history.slice(0, 8).forEach(track => {
-        const li = document.createElement('li');
-        li.textContent = track;
-        list.appendChild(li);
-      });
-      document.getElementById('historyCount').textContent = history.length;
-    }
-
-    function playPlaylist() {
-      const audios = Array.from(document.querySelectorAll('.track-card audio'));
-      if (!audios.length) return;
-      let index = 0;
-      const playNext = () => {
-        if (index >= audios.length) return;
-        audios[index].play();
-        audios[index].onended = () => {
-          index += 1;
-          playNext();
-        };
-      };
-      playNext();
-      showNotification('Воспроизведение всего плейлиста');
-    }
-
-    loadTracks();
-    updatePlaylist();
-    updateHistory();
+    });
   </script>
 </body>
 </html>
